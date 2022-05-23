@@ -1,0 +1,97 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NavBar */
+.active {
+    background-color:#0f8f31;
+    color: #fff;
+    border-left-color: #fce355fb !important;
+}
+.active-sub-menu {
+    color: rgb(16, 181, 38);
+}
+
+/* Sub NavBar */
+
+.show-sub {
+    display:block;
+}
+
+/* End NavBar */
+
+
+/* Toast */
+
+/* #error {
+    border-left: 0.5rem solid #e64141;
+}
+
+#error .icon-left {
+    color: #e64141;
+}
+
+#success {
+    border-left: 0.5rem solid rgba(5, 239, 5, 0.877);
+}
+
+#success .icon-left {
+    color: rgba(5, 239, 5, 0.877);
+}
+
+#warning {
+    border-left: 0.5rem solid rgba(253, 180, 11, 0.904);
+}
+
+#warning .icon-left {
+    color: rgba(253, 180, 11, 0.904);
+}
+.toast + .toast {
+    margin-top: 1.25rem;
+}
+
+.toast{
+    opacity: 0;
+    animation: toastIn 2s ease forwards, fadeOut linear 1.5s 3s forwards;
+} */
+
+/* @keyframes toastIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0.4;
+    }25% {
+        transform: translateX(-10%);
+        opacity: 0.6;
+    }50% {
+        transform: translateX(15%);
+        opacity: 0.8;
+    }100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes toastOut {
+    0% {
+
+    }25% {
+
+    }50% {
+
+    }100% {
+
+    }
+}
+
+@keyframes fadeOut {
+    to{
+        opacity: 0;
+    }
+} */
+
+/* End Toast */
+
+
+/* .label-notification {
+    
+} */

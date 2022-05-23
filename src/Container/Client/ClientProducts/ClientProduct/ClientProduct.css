@@ -1,0 +1,24 @@
+table td {
+    padding: 15px 8px;
+    /* border: 1px solid rgba(136, 136, 136, 0.395); */
+    text-align: left;
+}
+
+table tr {
+    box-shadow: 2px 2px 3px #cdcdcdbe;
+}
+/* table tbody tr:nth-child(even) {
+    background-color: #fdf7d8be;
+} */
+table tbody tr {
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+table tbody tr:hover {
+    background-color: #f5eec8be !important;
+}
+@media screen and (max-width: 768px) {
+    .responsive{
+        overflow-x: scroll !important;
+    }
+}
