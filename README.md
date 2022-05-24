@@ -1,6 +1,5 @@
-
-                                                                        GET START
-                                                                        
+#GET START
+                                                                       
 #step 1
 
 `npm install`;
