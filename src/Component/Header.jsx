@@ -92,6 +92,7 @@ const Header = ({ handleShowRespon }) => {
   };
   const handleLogOut = () => {
     localStorage.clear();
+    sessionStorage.removeItem("currentUrl");
     navigate("/login");
   };
 

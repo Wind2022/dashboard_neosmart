@@ -1,3 +1,4 @@
+// import { useSelector } from "react-redux";
 import { io } from "socket.io-client";
 
 export const urlImg = "http://localhost:8000/images/";
@@ -23,3 +24,7 @@ export const convertViToEn = (str, toUpperCase = false) => {
 export const socket = io("http://localhost:6001", {
   transports: ["websocket", "polling", "flashsocket"],
 });
+
+// export const user = () => {
+//   return useSelector((state) => state.auth.login?.currentUser);
+// };

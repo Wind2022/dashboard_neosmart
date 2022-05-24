@@ -14,6 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "../../ClientProducts/ClientProduct/ClientProduct.css";
 import SkeletonTable from "../../../../Component/Skeleton/SkeletonTable";
 import SkeletonDetail from "../../../../Component/Skeleton/SkeletonDetail";
+import axios from "axios";
 
 // Style Modal show detail
 const style = {
@@ -35,6 +36,7 @@ const ClientShowListBlogs = () => {
   const [dataNew, setDataNew] = useState(null);
   const [listBlogById, setListBlogById] = useState(null);
   const [getListBlog, setGetListBlog] = useState(null);
+  const user = useSelector((state) => state.auth.login?.currentUser);
   //  value input search
   const [value, setValue] = useState();
   const dispath = useDispatch();
@@ -68,7 +70,6 @@ const ClientShowListBlogs = () => {
   // End show Detail
 
   // get data list blog
-
   useEffect(() => {
     const getListBlog = async () => {
       try {
@@ -107,7 +108,7 @@ const ClientShowListBlogs = () => {
     setValue(e.target.value);
   };
 
-  //    search list 
+  //    search list
   useEffect(() => {
     const handleSearch = async () => {
       try {
@@ -191,7 +192,7 @@ const ClientShowListBlogs = () => {
                   {/* End button delete */}
                 </tr>
               )) ??
-              getListBlog?.map((item) => (
+                getListBlog?.map((item) => (
                   <tr key={item.id} className="dark:hover:bg-hoverButton">
                     <td className="flex flex-row justify-start gap-2 items-center">
                       <img
@@ -228,7 +229,6 @@ const ClientShowListBlogs = () => {
           ) : (
             <SkeletonTable rows={10} columns={5} image={true} />
           )}
-
         </table>
 
         {/* End table show ListBlog */}

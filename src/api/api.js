@@ -1,6 +1,8 @@
 import { callApi } from "../config/configApi";
 const server = "http://localhost:8000/api/";
-const access_token = localStorage.getItem("token");
+// import { useSelector } from "react-redux";
+
+// const access_token = localStorage.getItem("token");
 
 export const clientApi = {
   // Api Product
@@ -35,7 +37,7 @@ export const clientApi = {
 
   // Api Category
   categoryShow() {
-    return callApi(`${server}category/index`, "GET", null, access_token);
+    return callApi(`${server}category/index`);
   },
   categoryShowById(id) {
     return callApi(`${server}category/show/${id}`);

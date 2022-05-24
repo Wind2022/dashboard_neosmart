@@ -22,6 +22,7 @@ export default function ClientLayout() {
   const [show, setShow] = useState(false);
 
   const location = useLocation();
+
   useEffect(() => {
     const setUrl = async () => {
       try {
@@ -34,7 +35,8 @@ export default function ClientLayout() {
     setUrl();
   }, []);
   useEffect(() => {
-    sessionStorage.setItem("currentUrl", location.pathname);
+    console.log(location);
+    location && sessionStorage.setItem("currentUrl", location.pathname);
   }, [location]);
 
   const handleShow = () => {
@@ -75,6 +77,7 @@ export default function ClientLayout() {
           access_token: data.access_token,
         };
         dispath(loginSuccess(refreshUser));
+        localStorage.setItem("token", data.access_token);
         config.headers["token"] = "Bearer" + data.access_token;
       }
       return config;

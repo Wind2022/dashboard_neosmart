@@ -133,7 +133,7 @@ const ClientMail = () => {
   useEffect(() => {
     socket.on("message", (data) => {
       setTimeout(() => {
-       setRender(!render)
+        setRender(!render);
       }, 600);
     });
   });
@@ -153,7 +153,6 @@ const ClientMail = () => {
 
   const handleSeen = (id) => {
     updateStatus(id, { status: 1 });
-   
   };
   return (
     <>

@@ -46,7 +46,9 @@ const ClientProduct = () => {
   const dispath = useDispatch();
   const navigate = useNavigate();
   const [productById, setProductById] = useState(null);
-  const  [dataCategory, setDateCategory] = useState([])
+  const [dataCategory, setDateCategory] = useState([]);
+  const user = useSelector((state) => state.auth.login?.currentUser);
+
   // pagination
   const [pagination, setPagination] = useState({
     current_page: 0,
@@ -69,15 +71,14 @@ const ClientProduct = () => {
   useEffect(() => {
     const getDataCategory = async () => {
       try {
-        const res = await clientApi.categoryShow()
-        setDateCategory(res.data)
+        const res = await clientApi.categoryShow();
+        setDateCategory(res.data);
       } catch (error) {
         console.log(error);
       }
-      
-    }
-    getDataCategory()
-  }, [render])
+    };
+    getDataCategory();
+  }, [render]);
 
   useEffect(() => {
     const getProductPagination = async () => {
@@ -131,8 +132,6 @@ const ClientProduct = () => {
     setOpen(false);
   };
   // End show Detail
-
-  
 
   // delete Product
 
@@ -277,7 +276,8 @@ const ClientProduct = () => {
                       {item.title}
                     </Link>
                   </td>
-                  <td className="w-48 truncate"
+                  <td
+                    className="w-48 truncate"
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   ></td>
                   <td>{Intl.NumberFormat().format(Number(item.price))} VNĐ</td>

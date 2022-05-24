@@ -89,7 +89,6 @@ export const getAllUser = async (access_token, dispath, axiosJWT) => {
       },
     });
     dispath(getAllUserSuccess(res.data));
-    console.log(res.data);
   } catch (error) {
     dispath(getAllUserFailed());
   }
