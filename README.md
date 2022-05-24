@@ -1,9 +1,11 @@
 
-# step 1:
+                                                                        GET START
+                                                                        
+#step 1
 
 `npm install`;
 
-$step 2:
+#step 2:
 
 `npm start`
 
